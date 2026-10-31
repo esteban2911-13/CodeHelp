@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #1E1E1E;
+    }
+
+    header {
+      position: fixed;
+      width: 250px; 
+      height: 96%;
+      background-color: #252525;
+      color: white;
+      padding: 20px;
+      border-radius: 50px;
+    }
+
+    main {
+      flex-grow: 1;
+      background-color: #1E1E1E;
+      padding: 0px;
+      margin-left: 250px; 
+    }
+    .nav-icon {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .nav-element > nav > ul > li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        padding: 6px;
+        text-decoration: none;
+        background-color: #363636;
+        border-radius: 40px;
+    }
+
+    .nav-link {
+        color: white;
+        text-decoration: none;
+        margin-left: 10px;
+    }
+
+    .main-image {
+        width: 50%;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+        padding-bottom: 10%;
+    }
+
+    .title-text {
+        color: white;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .blue {
+        color: #0092FA; 
+    }
+
+    .title {
+        font-size: 500%;
+        font-weight: bold;
+    }
+
+    .alfa-slab-one {
+        font-family: 'Alfa Slab One', Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .arvo-regular {
+        font-family: "Arvo", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    
+    /* Área principal del explorador */
+    .files-main {
+        margin-left: 290px;
+        padding: 25px;
+        min-height: 100vh;
+        box-sizing: border-box;
+        background: #1E1E1E;
+        color: white;
+        text-align: center;
+    }
+
+    .files-title {
+        font-size: clamp(35px, 5vw, 60px);
+        margin: 0 0 25px;
+    }
+
+    .files-title .blue {
+        color: #0092FA;
+    }
+
+    /* Cuadrícula de carpetas */
+    .folder-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(100px, 150px));
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .folder-card {
+        background: transparent;
+        color: white;
+        border: 2px solid transparent;
+        padding: 8px;
+        cursor: pointer;
+        font-family: "Arvo", serif;
+    }
+
+    .folder-card:hover,
+    .folder-card:focus-visible {
+        border-color: #0092FA;
+        outline: none;
+    }
+
+    .folder-card img {
+        display: block;
+        width: 100%;
+        max-width: 100px;
+        margin: 0 auto 5px;
+    }
+
+    .folder-card span {
+        overflow-wrap: anywhere;
+    }
+
+    /* Lista de archivos */
+    .file-view,
+    .editor-view {
+        max-width: 850px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .file-view h2,
+    .editor-view h2 {
+        text-align: center;
+        font-size: 38px;
+        margin: 20px 0;
+    }
+
+    .file-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .file-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+        padding: 8px 12px;
+        border: none;
+        border-radius: 30px;
+        background: #363636;
+        color: white;
+        cursor: pointer;
+        text-align: left;
+        font-size: 16px;
+    }
+
+    .file-row:hover {
+        background: #505050;
+    }
+
+    .file-row img {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+    }
+
+    .back-button,
+    .editor-actions button {
+        background: #0092FA;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 15px;
+        cursor: pointer;
+        margin: 5px 0;
+    }
+
+    #file-content {
+        display: block;
+        width: 100%;
+        min-height: 350px;
+        box-sizing: border-box;
+        resize: vertical;
+        padding: 15px;
+        border: 1px solid #444;
+        border-radius: 8px;
+        background: #171717;
+        color: white;
+        font: 15px Consolas, monospace;
+    }
+
+    .editor-actions {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    #save-status {
+        color: #70e69a;
+    }
+
+    /* Adaptación a pantallas pequeñas */
+    @media (max-width: 700px) {
+        .files-main {
+            margin-left: 0;
+            padding: 20px 12px;
+        }
+
+        .folder-grid {
+            grid-template-columns: repeat(3, minmax(70px, 1fr));
+            gap: 8px;
+        }
+
+        .folder-card img {
+            max-width: 75px;
+        }
+    }
+
+    
+.toolbar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 15px 0 25px;
+}
+
+.toolbar button,
+.delete-button {
+    border: none;
+    border-radius: 8px;
+    padding: 10px 14px;
+    cursor: pointer;
+    color: white;
+}
+
+.toolbar button {
+    background: #087fd0;
+}
+
+.toolbar button:hover {
+    background: #0092FA;
+}
+
+.folder-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.folder-card .item-name,
+.file-row .item-name {
+    cursor: pointer;
+    overflow-wrap: anywhere;
+}
+
+.folder-card .delete-button,
+.file-row .delete-button {
+    background: #a62b2b;
+    flex-shrink: 0;
+    padding: 7px 10px;
+}
+
+.folder-card .delete-button:hover,
+.file-row .delete-button:hover {
+    background: #d33333;
+}
+
+.file-row .item-name {
+    flex: 1;
+}
+
+.file-row {
+    box-sizing: border-box;
+}
+
+#folder-view,
+.file-view,
+.editor-view {
+    min-width: 0;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* Mensajes cuando no hay carpetas o archivos */
+.empty-message {
+    font-family: "Arvo", serif;
+    color: #bdbdbd;
+    width: 100%;
+    padding: 35px 15px;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-left: 230px;
+}
+
+.empty-message2 {
+    font-family: "Arvo", serif;
+    color: #bdbdbd;
+    width: 100%;
+    padding: 35px 15px;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-left: 180px;
+    text-align: center;
+}

@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #1E1E1E;
+    }
+
+    header {
+      position: fixed;
+      width: 250px; 
+      height: 96%;
+      background-color: #252525;
+      color: white;
+      padding: 20px;
+      border-radius: 50px;
+    }
+
+    main {
+      flex-grow: 1;
+      background-color: #1E1E1E;
+      padding: 0px;
+      margin-left: 250px; 
+    }
+    .nav-icon {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .nav-element > nav > ul > li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        padding: 6px;
+        text-decoration: none;
+        background-color: #363636;
+        border-radius: 40px;
+    }
+
+    .nav-link {
+        color: white;
+        text-decoration: none;
+        margin-left: 10px;
+    }
+
+    .main-image {
+        width: 50%;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+        padding-bottom: 10%;
+    }
+
+    .title-text {
+        color: white;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .blue {
+        color: #0092FA; 
+    }
+
+    .title {
+        font-size: 500%;
+        font-weight: bold;
+    }
+
+    .alfa-slab-one {
+        font-family: 'Alfa Slab One', Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .arvo-regular {
+        font-family: "Arvo", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .home-p {
+        font-family: "Arvo", serif;
+        font-weight: 400;
+        font-style: normal;
+        color: white;
+        text-align: center;
+        margin-top: 20px;
+        margin-left: 25px;
+        display: block;
+    }
+
+    .subtext {
+            font-family: "Arvo", serif;
+            font-weight: 400;
+            font-style: normal;
+            color: rgb(252, 252, 252);
+            text-align: center;
+            margin-top: 10px;
+            margin-left: 25px;
+            display: block;
+    }
+
+    .Numerador {
+        font-family: "Alfa Slab One", Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #0092FA;
+        text-align: left;
+        margin-top: 10px;
+        margin-left: 65px;
+        display: block;
+    }
+    
+    .Temporal-text {
+        font-family: "Arvo", serif;
+        font-weight: 400;
+        font-style: normal;
+        color: rgb(252, 252, 252);
+        text-align: left;
+        margin-top: 10px;
+        margin-left: 65px;
+        display: block;
+    }

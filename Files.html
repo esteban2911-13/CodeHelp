@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Files.css">
+    <title>CodeHelp</title>
+</head>
+<body>
+    <header style="text-align: left;">
+        <img src="img/image 3.png" alt="CodeHelp" width="90%" height="auto">
+        <section class="nav-element">
+            <hr style="border: none; border-top: 3px solid #000000; width: 90%; margin-left: 0; margin-right: auto;">
+            <nav style="display: flex; text-align: left; justify-content: left; align-items: center;">
+                <ul>
+                    <li><img src="img/Home.png" alt="Logo home" class="nav-icon"><a href="index.html" class="nav-link">Home</a></li>
+                    <li><img src="img/File.png" alt="Logo Files" class="nav-icon"><a href="Files.html" class="nav-link">Files</a></li>
+                    <li><img src="img/Compass.png" alt="Logo comunity" class="nav-icon"><a href="Comunity.html" class="nav-link">Comunity</a></li>
+                    <li><img src="img/Shopping bag.png" alt="Logo Shopping" class="nav-icon"><a href="Shop.html" class="nav-link">Shop</a></li>
+                </ul>
+            </nav>
+        </section>
+        <img src="img/image 1.png" alt="Logo CodeHelp" width="80%" height="auto" style="display: flex; justify-content: center;">
+        <hr style="border: none; border-top: 3px solid #000000; width: 90%; margin-left: 0; margin-right: auto;">
+        <img src="img/image 2.png" alt="Logo CodeHelp" width="40%" height="auto" style="display: flex; justify-content: center;">
+    </header>
+    <main class="files-main">
+
+    <!-- Vista principal de carpetas -->
+    <section id="folder-view">
+        <h1 class="files-title alfa-slab-one">
+            Your <span class="blue">Files</span>
+        </h1>
+
+        <div class="toolbar">
+            <button id="create-folder">+ New folder</button>
+        </div>
+
+        <div id="folder-grid" class="folder-grid"></div>
+    </section>
+
+    <!-- Vista del contenido de una carpeta -->
+    <section id="file-view" class="file-view" hidden>
+        <button id="back-button" class="back-button">
+            ← Back to folders
+        </button>
+
+        <h2 id="folder-title" class="alfa-slab-one"></h2>
+
+        <div class="toolbar">
+            <button id="create-file">+ New file</button>
+        </div>
+
+        <div id="file-list" class="file-list"></div>
+    </section>
+
+    <!-- Editor -->
+    <section id="editor-view" class="editor-view" hidden>
+        <button id="back-to-files" class="back-button">
+            ← Back to files
+        </button>
+
+        <h2 id="editor-title" class="alfa-slab-one"></h2>
+
+        <textarea id="file-content"
+            spellcheck="false"
+            placeholder="Write your code or text here..."></textarea>
+
+        <div class="editor-actions">
+            <button id="save-button">Save</button>
+            <button id="download-button">Download file</button>
+        </div>
+
+        <p id="save-status" aria-live="polite"></p>
+    </section>
+
+</main>
+
+<script src="Files.js"></script>
+</body>
+</html>
